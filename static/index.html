@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dreamchat</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <h1 class="title">Dreamchat</h1>
+      <div class="logo" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"/>
+          <path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/>
+        </svg>
+      </div>
+    </header>
+
+    <section class="image-box">
+      <img id="output-image" alt="Generated image" hidden>
+      <p id="image-placeholder" class="placeholder">Your image will appear here</p>
+      <div id="image-loader" class="loader" hidden></div>
+      <button id="paint-btn" class="round-btn paint-btn" title="Generate image" aria-label="Generate image">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18.4 2.6a2 2 0 0 1 2.9 2.9L11 15.8 8.2 13z"/>
+          <path d="M7 14.5c-2 0-3.5 1.5-3.5 3.5 0 1.2-.7 2.2-1.5 2.5 1 .9 2.5 1.5 4 1.5 2.5 0 4.5-2 4.5-4.5z"/>
+        </svg>
+      </button>
+    </section>
+
+    <textarea id="prompt-input" class="prompt-input" rows="2" placeholder="Describe the image you want to paint..."></textarea>
+
+    <section id="chat-history" class="chat-history"></section>
+
+    <footer class="composer">
+      <button id="mic-btn" class="round-btn" title="Speak" aria-label="Speak">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="9" y="2" width="6" height="12" rx="3"/>
+          <path d="M5 10a7 7 0 0 0 14 0"/>
+          <path d="M12 17v5"/>
+        </svg>
+      </button>
+      <input id="message-input" class="message-input" type="text" placeholder="Type or speak a message...">
+      <button id="send-btn" class="round-btn" title="Send" aria-label="Send">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 2L11 13"/>
+          <path d="M22 2l-7 20-4-9-9-4z"/>
+        </svg>
+      </button>
+    </footer>
+  </main>
+  <script src="/static/script.js"></script>
+</body>
+</html>
